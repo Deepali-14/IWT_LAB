@@ -1,0 +1,22 @@
+<!--
+We can have three values in shape i.e., circle, rectangle and polygon. Circle have first two values as the coordinates of center
+and third one is radius. You can find coordinates of circle by opening the image in paint. Target can be self, blank or name.
+First define map, second relate map with the image, third define shape and fourth define href i.e. Hyperlink reference. You can 
+find error by right clicking and going on view page soure code. # ke aagemap ka naam hai.
+Rectangle requires coordinates of primary diagonal of rectangle i.e. that of top left and bottom right. In polygon we have to give 
+n coordinates.
+
+-->
+<html>
+	<head>
+		<title>Images</title>
+	</head>
+	<body>
+		<img src=images/4.jpeg usemap=#m2  />
+		<map name=m2>
+			<area shape=circle coords="475 270 20" href="coffee.html" target="_blank" />
+			<area shape=rect coords="70 170 100 245" href="phone.html" target="_blank" />
+			<area shape=poly coords="300 200 150 340 105 100" href="laptop.html" target="_blank" />
+		</map>
+	</body> 
+</html>

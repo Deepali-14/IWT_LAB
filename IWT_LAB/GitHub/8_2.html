@@ -1,0 +1,35 @@
+<!-- 8.	Create a webpage to insert the images/4.jpeg and implement an image map over it. When user click on any object it another html page should be open to describe details about object using paragraph and heading in new tab. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Usemap</title>
+</head>
+<body>
+    <map name="location">
+        <!--laptop-->
+        <area shape="poly" coords="120 19 399 19 386 154 390 313 141 317 151 158" 
+        href="8a_2.html" target="_blank" >
+
+        <!--mobile phone-->
+        <area shape="poly" coords="70 173 108 174 102 250 62 251" href="8b_2.html" target="_blank" >
+
+        <!--coffee-->
+        <area shape="circle" coords="474 279 35" href="8c_2.html" target="_blank" >
+
+        <!--spectacles-->
+        <area shape="rect" coords="22 269 130 302" href="8d_2.html" target="_blank" >
+
+        <!--electric kettel-->
+        <area shape="rect" coords="426 126 514 212" href="8e_2.html" 
+        target="_blank" >
+
+        <!--jar-->
+        <area shape="rect" coords="516 180 587 244" href="8f_2.html" target="_blank" >
+    </map>
+    <img src="images/4.jpeg" usemap="#location" />    
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        nav
+        {
+           /* border:solid 1px red; /*to check the border outline*/
+            /*width:300px;*/
+            font-size:20px;
+            position:relative;
+            top:20px;
+          
+        }
+        nav ol
+        {
+          list-style: none;
+          margin:0;
+          padding:0;
+          position:relative;
+        }
+        nav ol a
+        {
+            text-decoration: none;
+        }
+        nav ol li
+        {
+            background-color:darkcyan;
+            color:white;
+            margin:1px;
+            padding-left:5px;
+            /*float:left;*/ 
+            position: relative;
+            width:200px;
+            box-shadow:2px 2px 3px gold;
+           
+        }
+        nav ol li:hover
+        {
+            background-color:orange;
+            color:black;
+        }
+        nav ol ul
+        {
+            list-style: none;
+            margin:0;
+            padding:0;
+            display:none;
+            position:absolute;
+            left:220px;
+            top:1px;
+        }
+        nav ol li:hover ul
+        {
+            display:block;s
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ol>
+            <a href=#><li>Home</li> </a>   
+            <a href="#"><li>Contacts   <!--for dropdown elements in navigation bar-->
+                <ul>
+                    <li> Mobile </li>
+                    <li> Address </li>
+                </ul>
+            </li><a>
+            <a href="#"><li>Multimedia
+                <ul>
+                    <li> Photo </li>
+                    <li> Video </li>
+                    <li> Audio </li>
+                </ul>
+            </li><a>
+        </ol>
+    </nav>
+    
+</body>
+</html>

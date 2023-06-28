@@ -1,0 +1,220 @@
+    #container-0
+    {
+        height:790px;
+        width:100%;
+        background-color: lightpink;
+        display:flex;
+        flex-direction:column;
+    }
+    .display-style
+    {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+    }
+    #container-1
+    {
+        height:790px;
+        width:100%;
+        background-color: lightskyblue;
+    }
+    #container-2
+    {
+        height:790px;
+        width:100%;
+        background-color: lightblue;
+    }
+    #container-3
+    {
+        height:790px;
+        width:100%;
+        background-color: lightcoral;
+    }
+    #container-4
+    {
+        height:790px;
+        width:100%;
+        background-color: lightcyan;
+    }
+    #container-5
+    {
+        height:790px;
+        width:100%;
+        background-color: lightgreen;
+    }
+    #container-6
+    {
+        height:790px;
+        width:100%;
+        background-color: lightsalmon;
+    }
+    #container-7
+    {
+        height:790px;
+        width:100%;
+        background-color: lightseagreen;
+    }
+    #container-8
+    {
+        height:790px;
+        width:100%;
+        background-color: lightgray;
+    }
+    #container-9
+    {
+        height:790px;
+        width:100%;
+        background-color: lightyellow;
+    }
+    #container-10
+    {
+        height:790px;
+        width:100%;
+        background-color: lightslategray;
+    }
+    #topbar
+    {
+      background-color:#779ecb;
+      padding:20px;
+    }
+    #body-style
+    {
+        margin:0;
+        padding:0;
+        background-color:lightpink;
+    }
+    .subcont
+    {
+        height:500px;
+        width:85%;
+        background-color:white;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        box-shadow:10px 10px 10px gray;
+    }
+    p{
+        font-size:35px;
+        font-family: 'Courier New', Courier, monospace;
+        text-align:center;
+        padding:30px;
+    }
+    nav{
+        font-size:18px;
+        position:fixed;
+        width:100%;
+        z-index:10;
+    }
+    nav ul{
+        list-style:none;
+        margin:0;
+        padding:0;
+    }
+    a{
+        text-decoration:none;
+    }
+    nav ul li:hover
+    {
+        background-color:white;
+        color:plum;
+    }
+    nav ul li{
+        background-color:plum;
+        color:black;
+        margin:1px;
+        width:8.95%;
+        height:60px;
+        float:left;
+        position:relative;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        box-shadow:8px 8px 8px gray;
+    }
+    #logo
+    {
+        z-index:5;
+        height:0px;
+        width:0px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .image-style
+    {
+        height:150px;
+        width:150px;
+        border-radius:50%;
+        box-shadow:5px 5px 5px gray;
+    }
+    #logo1
+    {
+        z-index:5;
+        height:0px;
+        width:0px;
+        display:flex;
+        justify-content:center;
+        position:relative;
+        top:-320px;
+    }
+    #li-style
+    {
+        text-align:center;
+    }
+    .img-style{
+        height:50px;
+        width:100px;
+        border-radius:50%;
+    }
+    #img1-style{
+        height:50px;
+        width:50px;
+        border-radius:50%;
+        margin-right:20px;
+    }
+    #img2-style{
+        height:50px;
+        width:70px;
+        border-radius:50%;
+        margin-right:20px;
+    }
+    #img3-style{
+        height:40px;
+        width:40px;
+        border-radius:50%;
+        margin-right:20px;
+    }
+    #img4-style{
+        height:30px;
+        width:30px;
+        border-radius:50%;
+        margin-right:20px;
+    }
+    .pre-style{
+        font-size:25px;
+        font-family: 'Courier New', Courier, monospace;
+        padding:30px;
+        display:flex;
+        align-items:center;
+        flex-direction:column;
+        justify-content: center;
+    }
+    .p-style{
+        font-size:15px;
+        font-family: 'Courier New', Courier, monospace;
+        padding:30px;
+        display:flex;
+        align-items:center;
+        flex-direction:column;
+        justify-content: center;
+    }
+    #span-style
+    {
+        display:flex;
+        align-items:center;
+        flex-direction:row;
+        justify-content: center;
+    }

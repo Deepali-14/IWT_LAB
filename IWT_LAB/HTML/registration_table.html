@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Forms</title>
+</head>
+<body bgcolor="biege">
+    <form method="get" action="profile.html" autocomplete="on">
+        <table cellspacing=15>
+            <tr>
+                <td colspan="2" align="center"><h1>Registration Form</h1></td>
+            </tr>
+            <tr>
+                <td> <label> <b>USERNAME: </b></label> </td>
+                <td> <input type="text" name="uname" placeholder="Enter Username" size="40"/><br> </td>
+            </tr>
+            <tr>
+                <td> <label> <b>PASSWORD: </b></label> </td>
+                <td> <input type="password" name="pswd" placeholder="Enter Password" size="40"/><br> </td>
+            </tr>
+            <tr>
+                <td> <label><b> GENDER: </b></label><br> </td>
+                <td> <input type="radio" name="gender" value="male" /><label>Male</label>
+                    <input type="radio" name="gender" value="female" /><label>Female</label><br> </td>
+            </tr>
+            <tr>
+                <td> <label><b> HOBBIES: </b></label><br> </td>
+                <td>
+                    <input type="checkbox" name="hobby" value="singing" /><label>Singing</label>
+                    <input type="checkbox" name="hobby" value="dancing" /><label>Dancing</label>
+                    <input type="checkbox" name="hobby" value="reading" /><label>Reading</label>
+                    <input type="checkbox" name="hobby" value="music" /><label>Music</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td> <label><b> CLASS: </b></label><br> </td>
+                <td>
+                    <select name="class" >
+                        <option value="default" selected>Choose Your Class</option>
+                        <option value="IT">B.Tech(IT)</option>
+                        <option value="CS">B.Tech(CS)</option>
+                        <option value="EEE">B.Tech(EEE)</option>
+                        <option value="EC">B.Tech(EC)</option>
+                        <option value="MT">B.Tech(MT)</option>
+                        <option value="BT">B.Tech(BT)</option>
+                    </select><BR>
+                </td>
+            </tr>
+            <tr>
+                <td> <label><b> COMMENTS: </b></label><br> </td>
+                <td> <textarea rows="2" cols="30" name="comments" placeholder="Enter Comments"></textarea>    <br> </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"> <input type=submit value="Register"/> 
+                    <a href="thankyou.html" ><input type="button" value="Thankyou"> </a>
+                    <input type=reset value="Reset"/> </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

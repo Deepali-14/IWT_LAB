@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>
+            Time
+        </title>
+        <style>
+            div
+            {
+                color:white;
+                border-radius:50%;
+                background-color:black;
+                height:100px;
+                width:100px;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                margin-left:47%;
+            }
+            body
+            {
+                background-color:plum;
+                margin:0;
+                padding:0;
+            }
+            h1{
+                text-align:center;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color:black;
+                font-weight: 500;
+                padding-top:80px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Time</h1>
+        <div id="clock"></div>
+        <script>
+            function clock()
+            {
+                d=new Date();
+                hh=d.getHours();
+                mm=d.getMinutes();
+                ss=d.getSeconds();
+                cTime=hh+":"+mm+":"+ss;
+                block=document.getElementById('clock');
+                block.innerHTML=cTime;
+            }
+            setInterval(clock, 1000);
+        </script>
+        
+    </body>
+</html>

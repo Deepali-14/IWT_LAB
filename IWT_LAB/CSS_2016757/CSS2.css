@@ -1,0 +1,83 @@
+body{
+    background-color: lightpink;
+    background-image:linear-gradient(to top right, rgba(250, 218, 114,.3), rgba(114, 211, 250,.3), rgba(207, 114, 250,.3), rgba(250, 128, 114,.3)), url("bgs/diagonal_striped_brick.png");
+}
+.intro{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    color:cadetblue;
+}
+#p1{
+    font-size: 15px;
+    word-spacing: 5px;
+    text-align: justify;
+    line-height: 30px;
+    border: 3px;
+    border-color:steelblue;
+    border-style:solid;
+    border-radius: 40px;
+    margin: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 10px 20px 5px rgba(245, 76, 104, 0.308);
+    position:sticky;
+    top:20px;
+    
+}
+#p2{
+    font-size: 15px;
+    word-spacing: 5px;
+    line-height: 30px;
+    border: 3px;
+    border-color:steelblue;
+    border-style:solid;
+    border-radius: 40px;
+    margin: 20px;
+    padding: 20px;
+    text-align: justify;
+    box-sizing: border-box;
+    box-shadow: 10px 20px 5px rgba(245, 76, 104, 0.308);
+}
+.hl{
+    background-color:cornflowerblue;
+    color: darkslateblue;
+}
+h2{
+    text-align: center;
+    color: firebrick;
+    font-size: 20px;
+}
+.img40{
+    border-radius: 400px;
+    height: 200px;
+    float: right;
+    margin-left: 40px;
+}
+div{
+    clear:both;
+    border: 3px;
+    border-color:steelblue;
+    border-style:solid;
+    border-radius: 40px;
+    margin: 20px;
+    padding: 20px;
+    height: 400px;
+    width: 400px;
+    box-sizing: border-box;
+    position: relative;
+}
+.img24{
+    border-radius: 40px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.css{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    color:rgb(84, 83, 163);
+}

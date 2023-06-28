@@ -1,0 +1,153 @@
+<!DOCTYPE html>  
+<html>  
+    <head> 
+        <style>  
+            body{  
+                font-family: Calibri, Helvetica, sans-serif;  
+                background:#59b0d8 ;  
+            }  
+            .container {  
+                padding: 50px;  
+                background-color: lightblue;
+                height:100%;
+                width:50vw;
+                margin-left:17rem;  
+                background: linear-gradient(-240deg, #8468ff 70%, #785bf7 70%);
+                border-radius: 0.4em;
+                box-shadow: 0 1.3em 1.8em rgba(94, 72, 181, 0.25);
+            }  
+            
+            input[type=text], input[type=password], textarea {  
+                width: 50%;  
+                padding: 15px;  
+                margin: 5px 0 22px 0;  
+                display: inline-block;  
+                border: none;  
+                background: #f1f1f1;  
+            }
+            div {  
+                padding: 10px 0;  
+            }  
+            hr {  
+                border: 1px solid #f1f1f1;  
+                margin-bottom: 25px;  
+            }  
+            .registerbtn {  
+                background-color:darkblue;  
+                color: white;  
+                padding: 16px 20px;  
+                margin-left:17rem;  
+                border: none;  
+                cursor: pointer;  
+                width:20%;  
+                opacity: 0.9;  
+            }  
+        </style>
+        <script>
+            function validate() 
+            {
+                var fname = document.getElementById('fn').value;
+                var lname = document.getElementById('ln').value;
+                var usid = document.getElementById('u_id').value;
+                var phoneNumber = document.getElementById('pn').value;
+                var currAdd = document.getElementById('ca').value;
+                var Eid = document.getElementById('em').value;
+                var pass = document.getElementById('p').value;
+                var passr = document.getElementById('pr').value;
+                var fnameReg = /^[a-zA-Z]{2,30}$/;
+                var lnameReg=/^[a-zA-Z]{0,30}$/;
+                var usidReg= /^[A-Za-z]{5}[0-9]{5}$/;
+                var phoneReg = /^[1-9][0-9]{9}$/;
+                var EidReg=/^\w+@[a-zA-Z]+?\.[a-zA-Z]{2,3}$/;
+                var passReg=/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,16}$/;
+                //var addReg=/^\w+[$/
+                if(fnameReg.test(fname)==false)
+                {
+                    alert('Please enter a valid first Name');
+                    return false;
+                }
+                else if(lnameReg.test(lname)==false)
+                {
+                    alert('Please enter a valid Last Name');
+                    return false;
+                }
+                else if(usidReg.test(usid)==false)
+                {
+                    alert('Please enter a valid User Id');
+                    return false;
+                }
+                else if(phoneReg.test(phoneNumber)== false)
+                {
+                    document.getElementById('pn').autofocus=true;
+                    document.getElementById('pn').style.color ='red';
+					document.getElementById('phmsg').innerHTML = 'Please enter a valid Phone Number';
+                    return false;
+                }
+                else if(EidReg.test(Eid)==false)
+                {
+                    document.getElementById('em').autofocus=true;
+                    document.getElementById('em').style.color ='red';
+					document.getElementById('emsg').innerHTML = 'Please enter a valid Email Address';
+                    return false;
+                }
+                else if(passReg.test(pass)==false)
+                {
+                    alert('Please enter a valid Password');
+                    return false;
+                }
+                else if(passReg.test(passr)==false && !(passr===pass))
+                {
+                    alert('Please confirm the Password appropriately');
+                    return false;
+                }
+                else
+                    return true;
+            }
+        </script>
+    </head>  
+    <body>  
+        <form action="" method="get" onsubmit="return validate()" >  
+            <div class="container">  
+                <center>  <h1 style="color:darkblue;"> User Registeration Form</h1> </center>  
+                <hr>
+                <table border="0" >
+                    <tr align="center">
+                        <td><label> Firstname </label></td>
+                        <td><input id="fn" type="text" name="firstname" placeholder= "Firstname"/></td>
+                    </tr>
+                    <tr align="center">
+                        <td><label> Lastname </label></td>
+                        <td><input id="ln" type="text" name="lastname" placeholder="Lastname"/></td>
+                    </tr>
+                    <tr align="center">
+                        <td><label> User Id </label></td>
+                        <td><input  id="u_id" type="text" name="uid" placeholder="User ID"/></td>
+                    </tr>
+                    <tr align="center">
+                        <td><label for="psw"><b>Password</b></label></td>
+                        <td> <input id="p" type="password" placeholder="Enter Password" name="psw" /></td>
+                    </tr>
+                    <tr align="center">
+                        <td><label for="psw-repeat"><b>Confirm Password</b></label></td>
+                        <td><input id="pr" type="password" placeholder="Retype Password" name="psw-repeat" /></td>
+                    </tr>
+                    <tr align="center">
+                        <td><label>Current Address</label></td>
+                        <td><textarea id="ca" cols="80" rows="5" required placeholder="Current Address" value="address"></textarea></td>
+                    </tr>
+                    <tr align="center">
+                        <td><label for="email"><b>Email ID</b></label></td>
+                        <td><input id="em" type="text" placeholder="Enter Email" name="email"/><span id='emsg'></span></td>
+                    </tr>
+                    <tr align="center">
+                        <td><label>Contact Number</label></td>
+                        <td><input id="pn" type="text" name="phone" placeholder="Contact Number"/><div id='phmsg'></div></td>
+                    </tr>
+                    <tr align="center">
+                        <td colspan=2><button type="submit" class="registerbtn">Register</button></td>
+                    </tr>
+                </table>
+            </div>
+        </form> 
+    </body>  
+</html>  

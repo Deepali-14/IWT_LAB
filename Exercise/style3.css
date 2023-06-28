@@ -1,0 +1,65 @@
+.container
+{
+    margin-top:70px;
+    padding-top:90px;
+    height:400px;
+    width:1000px;
+    display: flex;
+    flex-direction:row; 
+    justify-content: space-around;  
+}
+
+body
+{
+    background-color:black;
+}
+
+.container > div > img
+{
+    height:150px;
+    width:150px;
+    animation-name: animateOne; 
+    animation-duration: 3s;
+    animation-iteration-count: infinite; 
+    animation-direction: alternate;
+    position: relative;
+}
+
+.container > div > p
+{
+    padding:30px;
+    color: white;
+    font-size: 20px;
+    animation-name: animateOne; 
+    animation-duration: 3s;
+    animation-iteration-count: infinite; 
+    animation-direction: alternate;
+    position: relative;
+}
+
+.container > div:hover     
+{
+    transform:scale(20) translateY(50px);  
+    transition:2s; 
+}
+
+@keyframes animateOne {                
+    from{   
+            transform:rotate(0deg); 
+            color:yellow; 
+            left:0px;
+    }
+
+    50%{
+        left:100px;
+        top:0px;
+    }
+
+    to{
+        color:rgb(251, 0, 255);
+        transform:rotate(180deg);
+        left:200px;
+        top:200px;
+    }
+    
+}

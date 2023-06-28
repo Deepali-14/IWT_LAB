@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number</title>
+    <style>
+        body{
+            background-color: rgb(0, 158, 158);
+            display: flex;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+        }
+        #outer{
+            height: 596px;
+            width: 100%;
+            background-color: rgb(0, 158, 158);
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            z-index: 8;
+        }
+        #root{
+            margin: 0;
+            padding: 0;
+            height: 546px;
+            background-color:rgb(255, 234, 116); 
+            width: 90%;
+            border-radius: 50px;
+            box-shadow: rgba(71, 71, 71, 0.438) 10px 10px 10px;
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            z-index: 10;
+        }
+        h1{
+            font-size: 90px;
+            color:rgb(0, 158, 158) ;
+            font-family:'Brush Script MT';
+            margin: 45px;
+            padding: 0;
+
+        }
+        #head{
+            color:rgb(0, 158, 158);
+            font-size: 25px;
+            font-family: 'Centaur';
+        }
+        #guess{
+            width: 250px;
+            height: 25px;
+            margin-top: 20px;
+            background-color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            box-shadow: rgba(71, 71, 71, 0.438) 3px 3px 8px;
+        }
+        #submitButton{
+            width: 180px;
+            height: 28px;
+            font-size: 20px;
+            font-family: 'Footlight MT Light';
+            margin-top: 20px;
+            background-color: rgba(0, 158, 158, 0.831);
+            color:rgb(255, 234, 116) ;
+            border: none;
+            border-radius: 20px;
+            box-shadow: rgba(71, 71, 71, 0.438) 3px 3px 8px;
+        }
+        #submitButton:hover{
+            background-color: rgba(1, 138, 138, 0.831);
+        }
+        #output{
+            margin-top: 30px;
+            font-size: 25px;
+            font-family: 'Centaur';
+        }
+        #attempts{
+            margin-top: 10px;
+            font-size: 20px;
+            font-family: 'Centaur';
+        }
+    </style>
+</head>
+<body>
+     <div id="outer">
+        <div id="root">
+            <table border="0">
+                <form>
+                    <tr align="center">
+                        <td>
+                            <h1>Guess The Number</h1>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td id="head">
+                            Enter Any Number Between 1 And 1000
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td>
+                            <input type="text" name="guess" id="guess">
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td>
+                            <button id="submitButton" onclick="check();return false;">Submit Your Guess</button>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td>
+                            <div id="output">
+
+                            </div>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td>
+                            <div id="attempts">
+                                
+                            </div>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td>
+                            <div id="resetField">
+                                
+                            </div>
+                        </td>
+                    </tr>
+                </form>
+             </table>
+         </div>
+     </div>
+     <script>
+        var guessCount=1;
+        var n=randomNumber(1,1000);
+        var guessSubmit = document.querySelector("#submitButton");
+        var guessField = document.querySelector("#guess");
+        function randomNumber(min, max) 
+        {
+            return Math.floor(Math.random() * (max - min) + min);
+        }
+        function check()
+        {
+            var num=parseInt(document.getElementById("guess").value);
+            if(Number.isInteger(num))
+            {
+                if(guessCount<10){
+                    if(n==num)
+                    {
+                        print="Congratulations🎉! You guessed the right number in "+guessCount+" attempts! 😎";
+                        output.focus();
+                        document.getElementById("output").innerHTML=print;
+                        setGameOver();
+                    }
+                    else if(n>num)
+                    {
+                        print="Too low! Try again 😕";
+                        guessCount++;
+                        document.getElementById('attempts').innerHTML="Attempts Left: "+(11-guessCount);
+                    }
+                    else if(n<num)
+                    {
+                        print="Too high! Try again 😕";
+                        guessCount++;
+                        document.getElementById('attempts').innerHTML="Attempts Left: "+(11-guessCount);
+                    }
+                }
+                else if(guessCount==10)
+                {
+                    print="Oops❗You have reached maximum number of attempts!";
+                    output.focus();
+                    document.getElementById("output").innerHTML=print;
+                    document.getElementById('attempts').innerHTML="";
+                    setGameOver();
+                }
+                output.focus();
+                document.getElementById("output").innerHTML=print;
+            }
+            else
+            {
+                print="Please enter an integer number 🤐";
+                output.focus();
+                document.getElementById("output").innerHTML=print;
+            }
+        }
+        function setGameOver() 
+        {
+            guessCount=1;
+            document.getElementById("output").innerHTML="";
+            guessField.disabled = true;
+            guessSubmit.disabled = true;
+            resetButton = document.createElement('button');
+            resetButton.style.color="rgb(255, 234, 116)";
+            var Col=document.getElementById('resetField');
+            resetButton.style.backgroundColor="rgba(0, 158, 158, 0.831)";
+            resetButton.style.marginTop="20px";
+            resetButton.style.borderRadius="20px";
+            resetButton.style.boxShadow="rgba(71, 71, 71, 0.438) 3px 3px 8px";
+            resetButton.style.fontFamily="Footlight MT Light";
+            resetButton.style.height="28px";
+            resetButton.style.border="none";
+            resetButton.style.fontSize="20px";
+            resetButton.textContent = 'Start new game';
+            Col.appendChild(resetButton);
+            resetButton.addEventListener('click', resetGame);
+        }
+        function resetGame() 
+        {
+            print="Please input something 😏";
+            document.getElementById("output").innerHTML="";
+            resetButton.parentNode.removeChild(resetButton);
+            guessField.disabled = false;
+            guessSubmit.disabled = false;
+            guessField.value = '';
+            guessField.focus();
+            n=randomNumber(1,1000);
+        } 
+    </script>
+</body>
+</html>

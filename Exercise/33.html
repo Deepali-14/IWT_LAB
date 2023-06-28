@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <style>
+            body
+            {
+                margin:0;
+                padding:0;
+            }
+            #display2
+            {
+                height:500px;
+                width:500px;
+            }
+        </style>
+    </head>
+    <body>
+        <table border="0" id="t1">
+            <tr>
+                <td id="display1">
+                    <div>
+                        <img src="images/1.jpeg" height="150px" width="150px" onclick="change(this)" />
+                    </div>
+                    <div>
+                        <img src="images/2.jpeg" height="150px" width="150px" onclick="change(this)" />
+                    </div>
+                    <div>
+                        <img src="images/3.jpeg" height="150px" width="150px" onclick="change(this)" />
+                    </div>
+                    <div>
+                        <img src="images/4.jpeg" height="150px" width="150px" onclick="change(this)" />
+                    </div>
+                </td>
+                <td >
+                    <div>
+                        <img src="images/4.jpeg" height="600px" width="500px" id="display2"/>
+                    </div>
+                </td>
+            </tr>
+        <table>
+        <script>
+            x=document.getElementById("display2");
+            function change(ob)
+            {
+                x.src=ob.src;
+            }
+        </script>
+    </body>
+</html>

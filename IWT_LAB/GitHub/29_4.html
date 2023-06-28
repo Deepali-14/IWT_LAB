@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Grow And Shrink</title>
+</head>
+<style>
+    #text{
+        font-size: 5px;
+    }
+</style>
+<body>
+    <div id="text">
+        TEXT GROWING
+    </div>
+    <script>
+       // var fontSize=document.getElementById('text').style.fontSize;
+        fontSize=5;
+        //document.write(fontSize);
+        
+        // increasing();
+        function increasing(){
+            if(fontSize==50){
+                clearInterval(i);
+                document.getElementById('text').innerHTML='TEXT SHRINKING';
+                d=setInterval(decreasing,100);
+                
+            }            
+            else{
+                
+                fontSize += 1;
+                document.getElementById('text').style.fontSize=fontSize +'pt';
+                
+            }
+        }
+        // d=setInterval(decreasing,1000);
+        // setInterval(increasing,1000);
+        function decreasing(){
+            if(fontSize==5){
+                clearInterval(d);
+                document.getElementById('text').innerHTML='TEXT GROWING';
+                i=setInterval(increasing,100);
+                
+            }
+            else{
+               
+                fontSize -=1;
+                document.getElementById('text').style.fontSize=fontSize + 'pt';
+            }
+        }
+        i=setInterval(increasing,100);
+ 
+    </script>
+</body>
+</html>

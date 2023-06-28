@@ -1,0 +1,20 @@
+Cascading Style Sheet
+it is not markup lang, not programming leng
+it is style sheet lang
+it is a collection of rules
+rules are a collection of declarations
+
+selector{
+    property-name : value ;
+    property-name : value ;
+    property-name : value ;
+}
+
+//ye rule kis elements par define karna h vo selector decide karega
+//TYPES OF STYLE Sheet
+-external style sheet
+-internal style sheet
+-inline style sheet
+
+
+<link href="StyleSheet"

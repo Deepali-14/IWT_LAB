@@ -1,0 +1,82 @@
+<html>
+	<head>
+		<title>Survey Page</title>
+	</head>
+	<body>
+		<table border=0  align=center cellspacing=20>
+			<form method=post autocomplete=off>
+			<tr>
+			<td colspan=2><h1 align=center><font color=darkmagenta>Survey</font</h1></td>
+			</tr>
+			<tr>
+			<td><label>Name</label></td>
+			<td><input type=text placeholder="Name" name=name required autofocus /></td>
+			</tr>
+			<tr>
+			<td><label>Email Id</label></td>
+			<td><input type=email placeholder="Mail" name=mail required /></td>
+			</tr>
+			<tr>
+			<td><label>Gender</label></td>
+			<td><input type=radio name=gender value="m"/> Male
+			<input type=radio name=gender value="f"/> Female</td>
+			</tr>
+			<tr>
+			<td><label>Profession</label></td>
+			<td><select name=profession multiple size=1>
+				<option value=std >Student</option>
+				<option value=tch >Teacher</option>
+				<option value=bs >Business Man</option>
+			</select>
+			</td>
+			</tr>
+			<tr>
+			<td><label>Did our website meet your expectations?</label></td>
+			<td><input type=radio name=expectation value="y"/> Yes
+			<input type=radio name=expectation value="n"/> No</td>
+			</tr>
+			<tr>
+			<td><label>What aspect of the website fascinated you the most?</label></td>
+			<td><input type=checkbox name=fascinated value="g"/> Graphics
+			<input type=checkbox name=fascinated value="u"/> Ease of use
+			<input type=checkbox name=fascinated value="p"/> Product
+            <input type=checkbox name=improved value="r"/> Price</td>
+			</tr>
+			<tr>
+			<td><label>What aspect of the website do you feel should be improved?</label></td>
+			<td><input type=checkbox name=improved value="g"/> Graphics
+            <input type=checkbox name=improved value="u"/>Use complexity
+			<input type=checkbox name=improved value="h"/> Product
+            <input type=checkbox name=improved value="r"/> Price</td>
+			</tr>
+			<tr>
+			<td><label>Overall reliability</label></td>
+			<td><input type=radio name=reliable value="p"/>Poor
+			<input type=radio name=reliable value="g"/>Good
+			<input type=radio name=reliablevalue="vg"/>Very Good
+			<input type=radio name=reliable value="e"/>Excellent</td>
+			</tr>
+			<tr>
+			<tr>
+			<td><label>Overall rating</label></td>
+			<td><input type=radio name=feed value="p"/> Poor
+			<input type=radio name=feed value="g"/> Good
+			<input type=radio name=feed value="vg"/> Very Good
+			<input type=radio name=feed value="e"/> Excellent</td>
+			</tr>
+			<tr>
+			<td><label>Would you like to recommend this website to your friend?</label></td>
+			<td><input type=radio name=recommend value="y"/> Yes
+			<input type=radio name=recommend value="n"/> No</td>
+			</tr>
+			<tr>
+			<td><label>Any Suggestions?</label></td>
+			<td><textarea rows=5 cols=100 name=comments placeholder="Comments.."></textarea></td>
+			<tr align=center>
+			<td colspan=2><input type=reset />
+			<input type=submit /></td>
+			</tr>
+		</form>
+		</table>
+	</body>
+</html>

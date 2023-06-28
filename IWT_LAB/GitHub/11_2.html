@@ -1,0 +1,133 @@
+<!-- 11.	Modify the webpage created in Exercise-2 using HTML form. Use radio buttons for options, so user can choose only one among 4 options. Also add a submit button for quiz submission.   -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Modified Question Paper</title>
+    </head>
+    <body bgcolor="lavender">
+        <form action="11a_2.html">
+            <table border=0 width="100%" cellspacing="20">
+                <tr>
+                    <td align="center">
+                        <h1>QUESTION PAPER</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <h3>Answer the following questions:</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>1. What is your name?</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input type="radio" name="q1" value="a"><label>Juhi Verma</label><br>
+                            <input type="radio" name="q1" value="b"><label>Devgandha</label><br>
+                            <input type="radio" name="q1" value="c"><label>Deepali Singh</label><br>
+                            <input type="radio" name="q1" value="d"><label>Ayushi Rajput</label><br>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>2. What is your Roll Number?</b>>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input type="radio" name="q2" value="a"><label>2016757</label><br>
+                            <input type="radio" name="q2" value="b"><label>2016739</label><br>
+                            <input type="radio" name="q2" value="c"><label>2016736</label><br>
+                            <input type="radio" name="q2" value="d"><label>2016730</label><br>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>3. What is your Branch?</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input type="radio" name="q3" value="a"><label>Information Technology</label><br>
+                            <input type="radio" name="q3" value="b"><label>Computer Science</label><br>
+                            <input type="radio" name="q3" value="c"><label>Electrical Engineering</label><br>
+                            <input type="radio" name="q3" value="d"><label>Mechanical Engineering</label><br>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        4. <b>(x<sub>1</sub>+x<sub>2</sub>)<sup>2</sup>=?</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input type="radio" name="q4" value="a">
+                            <label>
+                                x<sub>1</sub><sup>2</sup>+2x<sub>1</sub>x<sub>2</sub>+x<sub>2</sub><sup>2</sup>
+                            </label><br>
+                            <input type="radio" name="q4" value="b">
+                            <label>
+                                x<sub>1</sub><sup>2</sup>-2x<sub>1</sub>x<sub>2</sub>+x<sub>2</sub><sup>2</sup>
+                            </label><br>
+                            <input type="radio" name="q4" value="c">
+                            <label>
+                                x<sub>1</sub><sup>2</sup>+2x<sub>1</sub>x<sub>2</sub>-x<sub>2</sub><sup>2
+                            </label><br>
+                            <input type="radio" name="q4" value="d">
+                            <label>
+                                x<sub>1</sub><sup>2</sup>-2x<sub>1</sub>x<sub>2</sub>-x<sub>2</sub><sup>2
+                            </label><br>
+                        </form>
+                    </td>
+                </tr> 
+                <tr>
+                    <td>
+                        5. <b>Select the correct output of following code:</b><br/>
+                        <pre>
+                            <b>
+    public class Addition 
+    {
+        public static void main(String[] args) 
+        {
+            int a=4,b=5;
+            int c=a+b;
+            System.out.print("Addition of a and b is: "+c);
+        }
+    }			
+                            </b>
+                        </pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input type="radio" name="q5" value="a"><label>Addition of a and b is: 4</label><br>
+                            <input type="radio" name="q5" value="b"><label>Addition of a and b is: 5</label><br>
+                            <input type="radio" name="q5" value="c"><label>Addition of a and b is: 9</label><br>
+                            <input type="radio" name="q5" value="d"><label>Addition of a and b is: 10</label><br>
+                        </form>
+                    </td>
+                </tr> 
+                <tr>
+                    <td align="center">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>    
+            </table>
+        </form>
+    </body>
+</html>

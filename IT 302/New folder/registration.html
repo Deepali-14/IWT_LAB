@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title> Registeration </title>
+	</head>
+
+	<body>
+		<h1> Registration Form </h1>
+		<form method=get action="imageMp.html" autocomplete=off>
+			<label> Username </label>
+			<input type=text name=uname value=user1 placeholder="Enter user name" size=50 required /> <br>
+			<label> Password </label> 
+			<input type=password name=pass placeholder="Enter Password" autofocus /> <br>
+			<label> Gender</label> 
+			<input type=radio name=gender value="m" /> Male 
+			<input type=radio name=gender value="f" checked /> Female <br>
+			<label> Hobbies </label>
+			<input type=checkbox name=hobbies value=r  /> Reading
+			<input type=checkbox name=hobbies value=w /> Writing
+			<input type=checkbox name=hobbies value=d /> Drawing <br>
+			<label> Class </label>
+			<select name=class multiple size=1>
+				<option value=btcs > B.Tech. CS </option>
+				<option value=btit > B.Tech. IT </option>
+				<option value=mtcs selected> M.Tech. CS </option>
+				<option value=mtit > M.Tech. IT </option>
+			</select> <br>
+			<label> Comments </label>
+			<textarea rows=5 cols=30 name=comments placeholder="comments.."></textarea> <br>
+			DOB : <input type=date name=dob min="2021-12-01" max="2022-12-01" /> </br>
+			COLOR : <input type=color name=color /> </br>
+			COLOR : <input type=url name=color /> </br>
+			<input type=reset value=clear /> 
+			<input type=submit value="Register" />
+		</form>		
+	</body>
+</html>

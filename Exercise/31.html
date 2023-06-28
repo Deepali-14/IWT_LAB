@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--Write a JS function to display value of range input field in a moveable label.-->
+<html>
+    <head>
+        <title></title>
+        <style>
+            #i2{
+                position:relative;
+            }
+        </style>
+    </head>
+    <body>
+        <form method="get">
+            <input type="range" onclick="range()" id="i1" value="v" name="n" min="0" max="100">
+            <div id="i2">
+        </div>
+        <button>Submit</button>
+    </form>
+        <script type="text/javascript">
+            function range(){
+                v=document.forms[0].elements[0].value;
+                t=document.getElementById("i2");
+                t.innerText=v;
+                t.style.left=v+"px";
+
+            }
+        </script>
+    </body>
+</html>

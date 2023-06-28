@@ -1,0 +1,45 @@
+body{
+    background-color: antiquewhite;
+}
+nav{
+    font-size: 30px;
+    position: relative;
+    top: 20px;
+}
+nav ol{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav ol a{
+    text-decoration: none;
+}
+nav ol li{
+    background-color:darkslategrey;
+    color:tan;
+    margin: 2px;
+    padding-left: 5px;
+    /*float: left;*/
+    width: 250px;
+    position: relative;
+}
+nav ol li:hover{
+    color:darkgrey;
+}
+
+/*Dropdown based navigation bar*/
+
+nav ol ul{                                 /*descendant used here*/
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    left: 255px;
+    top: 0px;
+}
+
+nav ol li:hover ul{
+    color:darkgrey;
+    display: block;
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Validation</title>
+        <style>
+            body{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color:thistle;
+            }
+            h1{
+                font-size: 50px;
+            }
+            .textArea{
+                width: 250px;
+                height: 20px;
+                border: none;
+            }
+            .labels{
+                font-size: 20px;
+            }
+            .btn{
+                width: 100px;
+                height: 30px;
+                margin: 15px;
+                background-color:slateblue;
+                border: none;
+                font-size: 20px;
+                color: white;
+            }
+            .btn:hover{
+                background-color:rgb(90, 73, 202);
+            }
+        </style>
+    </head>
+    <body>
+        <table cellspacing="15">
+            <form>
+                <tr align="center">
+                    <td colspan="2">
+                        <h1>REGISTRATION FORM</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="labels">First Name</label>
+                    </td>
+                    <td align="right">
+                        <input class="textArea" id="fname" type="text" name="fname">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="labels">Last Name</label>
+                    </td>
+                    <td align="right">
+                        <input class="textArea" id="lname" type="text" name="lname">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="labels">Email Id</label>
+                    </td>
+                    <td align="right">
+                        <input class="textArea" id="eid" type="email" name="eid">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="labels">Contact Number</label>
+                    </td>
+                    <td align="right">
+                        <input class="textArea" id="number" type="text" name="number">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="labels">Address</label>
+                    </td>
+                    <td align="right">
+                        <input class="textArea" id="add" type="text" name="add">
+                        <div id="addr"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="labels">User Id</label>
+                    </td>
+                    <td align="right">
+                        <input class="textArea" id="uid" type="text" name="uid">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="labels">Password</label>
+                    </td>
+                    <td align="right">
+                        <input class="textArea" id="pass" type="password" name="pass">
+                        <div id="pas"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="labels">Confirm Password</label>
+                    </td>
+                    <td align="right">
+                        <input class="textArea" id="cpass" type="password" name="cpass">
+                    </td>
+                </tr>
+                <tr  align="center">
+                    <td colspan="2">
+                        <input class="btn" type="button" value="Register" onclick="check()">
+                        <input class="btn" type="reset" value="Reset">
+                    </td>
+                </tr>
+            </form>
+        </table>
+    </body>
+    <script>
+        function check(){
+            var fname=document.getElementById('fname').value;
+            var lname=document.getElementById('lname').value;
+            var eid=document.getElementById('eid').value;
+            var number=document.getElementById('number').value;
+            var add=document.getElementById('add').value;
+            var uid=document.getElementById('uid').value;
+            var pass=document.getElementById('pass').value;
+            var cpass=document.getElementById('cpass').value;
+
+            fnameReg=/^[a-zA-Z]{2,20}$/;
+            lnameReg=/^[a-zA-Z]{2,20}$/;
+            eidReg=/^\w+@[a-z]+\.[a-z]{2,3}$/;
+            numberReg=/^[1-9][0-9]{9}$/;
+            uidReg=/^[a-zA-Z]{5}[0-9]{5}$/;
+            passReg=/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?=.*_).$/;
+
+            if(!fnameReg.test(fname)){
+                alert("Please Enter a valid first name");
+                return false;
+            }
+            else if(!lnameReg.test(lname)){
+                alert("Please enter a valid last name");
+                return false;
+            }
+            else if(!eidReg.test(eid)){
+                alert("Please enter a valid Email Id");
+                return false;
+            }
+            else if(!numberReg.test(number)){
+                alert("Please enter a valid phone number");
+                return false;
+            }
+            else if(add.length==0){
+                document.getElementById("addr").innerHTML="Please Fill Out This Field!";
+                return false;
+            }
+            else if(!uidReg.test(uid)){
+                alert("Please enter a valid user Id");
+                return false;
+            }
+            else if(!passReg.test(pass)){
+                document.getElementById("pas").innerHTML="Please create a strong password!";
+                return false;
+            }
+            else if(!pass.compareTo(cpass)){
+                alert("Passwords do not match");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</html>

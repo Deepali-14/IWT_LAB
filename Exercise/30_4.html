@@ -1,0 +1,158 @@
+<html>
+    <head>
+        <title>
+            Guess the Number Game
+        </title>
+    </head>
+    <style>
+        #output
+        {
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        body{
+            background-color:black;
+            text-align:center;
+        }
+        h1{
+            color:pink;
+            padding-top:30px;
+            text-align:center;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size:50px;
+        }
+        #display
+        {
+            height:40px;
+            font-size:25px;
+        }
+        #display:focus
+        {
+            height:40px;
+            font-size:25px;
+            background-color:lightcyan;
+        }
+        #output
+        {
+            color:plum;
+            font-size:30px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        #sub
+        {
+            background-color:white;
+            height:30px;
+            width:80px;
+            font-size:20px;
+        }
+        #sub:hover
+        {
+            background-color:lightgoldenrodyellow;
+            color:red;
+            height:30px;
+            width:80px;
+        }
+    </style>
+    <body>
+        <h1>Can you guess the number?</h1>
+        <div>
+            <form>
+                <table border="0" align="center" height="150" width="500">
+                    <tr>
+                        <td align="center">
+                            <label style="color:lightgray; font-size:30px">Enter your guess (1-1000)?</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <input id="display" type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <button id="sub" onclick="check();return false;">Submit</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div id="output">
+        </div>
+    </body>
+    <script>
+        var guessCount=0;
+        var n=randomNumber(1,1000);
+        var guessSubmit = document.querySelector("#sub");
+        var guessField = document.querySelector("#display");
+        function randomNumber(min, max) 
+        {
+            return Math.floor(Math.random() * (max - min) + min);
+        }
+        function check()
+        {
+            var num=parseInt(document.getElementById("display").value);
+            guessCount++;
+            if(Number.isInteger(num))
+            {
+                if(n==num)
+                {
+                    print="Congratulations! You guessed the right number! 😎";
+                    output.focus();
+                    document.getElementById("output").innerHTML=print;
+                    setGameOver();
+                }
+                else if(n>num)
+                {
+                    print="Too low! Try again 🙄";
+                }
+                else if(n<num)
+                {
+                    print="Too high! Try again 🙄";
+                }
+                else if(guessCount==10)
+                {
+                    print="Game Over ";
+                    output.focus();
+                    document.getElementById("output").innerHTML=print;
+                    setGameOver();
+                }
+                output.focus();
+                document.getElementById("output").innerHTML=print;
+            }
+            else
+            {
+                print="Please enter an integer number 🤐";
+                output.focus();
+                document.getElementById("output").innerHTML=print;
+            }
+        }
+        function setGameOver() 
+        {
+            guessCount=0;
+            document.getElementById("output").innerHTML="";
+            guessField.disabled = true;
+            guessSubmit.disabled = true;
+            resetButton = document.createElement('button');
+            resetButton.style.color="red";
+            resetButton.style.backgroundColor="lightgoldenrodyellow";
+            resetButton.style.marginTop="20px";
+            resetButton.style.height="35px";
+            resetButton.style.fontSize="20px";
+            resetButton.textContent = 'Start new game';
+            document.body.appendChild(resetButton);
+            resetButton.addEventListener('click', resetGame);
+        }
+        function resetGame() 
+        {
+            print="Please input something 😏";
+            document.getElementById("output").innerHTML="";
+            resetButton.parentNode.removeChild(resetButton);
+            guessField.disabled = false;
+            guessSubmit.disabled = false;
+            guessField.value = '';
+            guessField.focus();
+            n=randomNumber(1,1000);
+        } 
+    </script>
+</html>

@@ -1,0 +1,23 @@
+body{
+    background-color: #d50404;
+    background-image: linear-gradient(to top left, rgba(255, 0, 200, 0.4), rgba(144, 0, 255, 0.4), rgba(55, 0, 255, 0.4), rgba(0, 174, 255, 0.4)), url("images/xv.png");
+}
+h1{
+    font-size: 30px;
+    font-weight: bolder;
+    color:crimson;
+}
+p{
+    font-size: 15px;
+    color:black;
+    line-height: 35px;
+}
+.highlight{
+    font-weight: bold;
+    font-size: 18px;
+    background-color: chartreuse;
+}
+h2{
+    font-size: 20px;
+    color:crimson;
+}

@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>
+            Counter
+        </title>
+        <style>
+            h1{
+                color:black;
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: 600;
+                text-align:center;
+                padding-top: 30px;
+                padding-bottom: 10px;
+            }
+            body{
+                background-color: rgb(153, 186, 199);
+            }
+            #counter
+            {
+                padding-top: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #display1{
+                padding-top: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            body{
+                margin:0;
+                padding:0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> Timer </h1><hr color=black>
+        <div id="counter"></div>
+        <div id="display1">
+            <button onclick="x=setInterval(start, 1000)">Start</button>
+            <button onclick="clearInterval(x)">Stop</button>
+            <button onclick="reset(x)">Reset</button>
+            <button onclick="resume()">Resume</button>
+        </div>
+        <script>
+            count=0;
+            function start()
+            {
+                block=document.getElementById('counter');
+                block.innerHTML=count;
+                count++;
+            }
+            function reset(x)
+            {
+                clearInterval(x);
+                count=0;
+                block=document.getElementById('counter');
+                block.innerHTML=count;
+            }
+            function resume()
+            {
+                x=setInterval(start, 1000);
+            }
+        </script>
+    </body>
+</html>

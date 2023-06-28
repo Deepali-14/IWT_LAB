@@ -1,0 +1,40 @@
+body{
+    background-color:mistyrose;
+}
+.Quote1 {
+    border: solid rgb(160, 82, 82) 2px;
+    height: 430px;
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    background-color:burlywood;
+    float: left;
+}
+
+.Quote1 > #div1 {
+    box-sizing: border-box;
+    height: 130px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position:static;
+    
+}
+
+.Quote1 > #div2 {
+    box-sizing: border-box;
+    height: 300px;
+    position: relative;
+}
+
+.Quote1 > #div2 img {
+    box-sizing: border-box;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.imp{
+    text-transform:uppercase;
+    text-align: center;
+    font-size: 35px;
+}

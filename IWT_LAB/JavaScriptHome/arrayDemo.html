@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Demo</title>
+    <script>
+        Arr1=[2,'Two','20'];
+        Arr2=new Array(5);
+        Arr2[0]=1;
+        Arr2[1]='Juhi';
+        Arr2[2]='Verma';
+        Arr2[3]='hello';
+        Arr2[4]=36;
+        for(i=0; i<Arr1.length ;i++){
+            document.write(Arr1[i]+"<br>");
+        }
+        document.write("<br>");
+        x=Arr2.slice(2,4);
+        for(i=0; i<Arr2.length ;i++){
+            document.write(Arr2[i]+"<br>");
+        }
+        document.write("<br>");
+        Arr3=Arr1.concat(Arr2);
+        for(i=0; i<Arr3.length ;i++){
+            document.write(Arr3[i]+"<br>");
+        }
+
+        Arr4=Arr3.sort();
+        document.write("<br>");
+        for(i=0; i<Arr4.length ;i++){
+            document.write(Arr4[i]+"<br>");
+        }
+
+        Arr5=[1,2,11];
+        Arr6=Arr5.sort();
+        document.write("<br>");
+        for(i=0; i<Arr6.length ;i++){
+            document.write(Arr6[i]+"<br>");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

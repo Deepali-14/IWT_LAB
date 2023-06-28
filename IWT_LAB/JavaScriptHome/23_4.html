@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Card Layout</title>
+        <style>
+            *{
+                box-sizing: border-box;
+             }
+            .card
+            {
+                position:relative;
+                width:30%;
+                border: 2px solid black;
+                box-shadow: 5px 10px pink;
+                margin:10px;
+                height:800px;
+            }
+            .card>img
+            {
+                width:100%;
+                height:500px;
+            }
+            .desc
+            {
+                padding:20px;
+            }
+            h2{
+                text-align:center;
+                color:rgba(0, 38, 255, 0.459);
+            }
+            p{
+                text-align:justify;
+                color:blueviolet
+            }
+            .date
+            {
+                width:30%;
+                color:plum;
+                font-size:15px;
+                background-color:rgba(255, 230, 0, 0.459);
+                position:absolute;
+                top:96%;
+                left:63%;
+                transform:rotate(-6deg);
+                text-align:center;
+            }
+            body{
+                display:flex;
+                margin:0px;
+                padding:0px;
+                justify-content: center;
+                align-items:flex-start;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            images=["14_6.jpeg", "14_14.jpeg", "14_8.jpg"];
+            date=["01-03-2023", "02-03-2023", "03-03-2023"];
+            titles=["Cinderella", "The Time Machine", "Harry Potter"];
+            desc=["Cinderella, the most popular of all fairy tales, is a time-less story of virtue rewarded. Sweet, beautiful Cinderella, cruelly mistreated by her evil stepmother and stepsisters, is helped by her magical fairy godmother, who sends her off to win the heart of a handsome prince and live happily ever after.", 
+                    "The story follows a Victorian scientist, who claims that he has invented a device that enables him to travel through time, and has visited the future, arriving in the year 802,701 in what had once been London.",
+                    "Adaptation of the first of J.K. Rowling's popular children's novels about Harry Potter, a boy who learns on his eleventh birthday that he is the orphaned son of two powerful wizards and possesses unique magical powers of his own. He is summoned from his life as an unwanted child to become a student at Hogwarts, an English boarding school for wizards. There, he meets several friends who become his closest allies and help him discover the truth about his parents' mysterious deaths."]
+            
+            
+            for(i=0; i<3; i++)
+            {
+            
+                card='<div class="card">'
+                    +'<img src="images/'+images[i]+'" />'
+                    +'<div class="date">'+date[i]+'</div>'
+                    +'<div class="desc">'
+                        +'<h2>'+titles[i]+'</h2>'
+                        +'<p>'+desc[i]+'</p>'
+                    +'</div>'
+                +'</div>'
+                document.write(card);
+            }
+            
+        </script>
+        
+    </body>
+</html>

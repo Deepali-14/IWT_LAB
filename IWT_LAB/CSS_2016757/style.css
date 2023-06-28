@@ -1,0 +1,14 @@
+body{
+    background-image:linear-gradient(to top right, rgba(250, 218, 114,.5), rgba(114, 211, 250,.5), rgba(207, 114, 250,.5), rgba(250, 128, 114,.5)), url("images/16.jpeg");
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    font-size: 50px;
+}
+.highlight{
+    background-color: black;
+    color:antiquewhite;
+}
+h1{
+    text-align: center;
+}

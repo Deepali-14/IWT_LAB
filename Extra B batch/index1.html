@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Resume Builder</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #outer{
+                width:80%;
+                height:600px;
+            }
+            #inner{
+                border:2px solid black;
+                width:100%;
+                height:200px;
+                padding: 10px;
+            }
+            input[type="text"]{
+                width: 200px;
+            }
+            label{
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <form method="POST" action="Resume.jsp">
+            <table id="outer">
+                <tr>
+                    <td><label>Name: </label></td>
+                    <td><input type="text" name="name" placeholder="Enter Your Name"></td>
+                </tr>
+                <tr>
+                    <td><label>E-mail: </label></td>
+                    <td><input type="email" name="email" placeholder="Enter Your Email Id"></td>
+                </tr>
+                <tr>
+                    <td><label>Contact: </label></td>
+                    <td><input type="number" name="contact" placeholder="Enter Your Contact Number"></td>
+                </tr>
+                <tr>
+                    <td><label>Objective: </label></td>
+                    <td><textarea rows="5" cols="30" name="obj" placeholder="Enter Objective"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label>Qualifications: </label></td>
+                    <td>
+                        <table id="inner">
+                            <tr>
+                                <td><label>Class</label></td>
+                                <td><label>Year</label></td>
+                                <td><label>Percentage/CGPA</label></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select name="cls">
+                                        <option>10th</option>
+                                        <option>12th</option>
+                                        <option>UnderGraduate</option>
+                                        <option>PostGraduate</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" name="year"></td>
+                                <td><input type="text" name="per"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select name="cls">
+                                        <option>10th</option>
+                                        <option>12th</option>
+                                        <option>UnderGraduate</option>
+                                        <option>PostGraduate</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" name="year"></td>
+                                <td><input type="text" name="per"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select name="cls">
+                                        <option>10th</option>
+                                        <option>12th</option>
+                                        <option>UnderGraduate</option>
+                                        <option>PostGraduate</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" name="year"></td>
+                                <td><input type="text" name="per"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select name="cls">
+                                        <option>10th</option>
+                                        <option>12th</option>
+                                        <option>UnderGraduate</option>
+                                        <option>PostGraduate</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" name="year"></td>
+                                <td><input type="text" name="per"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Technical Skills:</label></td>
+                    <td>
+                        <input type="checkbox" name='skills' value="C"><label>C</label><br>
+                        <input type="checkbox" name='skills' value="C++"><label>C++</label><br>
+                        <input type="checkbox" name='skills' value="Java"><label>Java</label><br>
+                        <input type="checkbox" name='skills' value="OOP"><label>OOP</label><br>
+                        <input type="checkbox" name='skills' value="DSA"><label>DSA</label><br>
+                        <input type="checkbox" name='skills' value="DBMS"><label>DBMS</label><br>
+                        <input type="checkbox" name='skills' value="DP"><label>DP</label><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Hobbies:</label></td>
+                    <td>
+                        <input type="text" name="hobby" placeholder="Enter Your Hobby">
+                    </td>
+                </tr>
+                <tr align="center">
+                    <td colspan="2"><input type="Submit" value="Generate CV"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

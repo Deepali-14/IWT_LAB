@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+	<head>
+		<title> Temperature Converter </title>
+		<style>
+				h1
+				{
+					color:white;
+					text-align:center;
+					font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+				}
+				body
+				{
+					background-color:black;
+				}
+		</style>
+	</head>
+
+	<body>
+		<form>
+			<table align="center" border="0">
+				<tr height="80px"></tr>
+
+				<tr align="center">
+					<td colspan="2">
+						<h1>Temperature Converter</h1>
+					</td>
+				</tr>
+
+				<tr align="center">
+					<td>
+						INPUT
+					</td>
+					<td>
+						OUTPUT
+					</td>
+				</tr>
+
+				<tr align="center">
+					<td>
+						<input id="1" type=number onchange="convert()"> 
+					</td>
+					<td>
+						<input id="2" type=text>
+					</td>
+				</tr>
+
+				<tr align="center">
+					<td>
+						<select  id="3" name="input" onchange="convert()">
+							<option value = "K"> Kelvin </option>
+							<option value = "C"> Celsius </option>
+							<option value = "F"> Fahrenheit </option>
+						</select>
+					</td>
+					<td>
+						<select id="4" name="output" onchange="convert()">
+							<option value = "K"> Kelvin </option>
+							<option value = "C"> Celsius </option>
+							<option value = "F"> Fahrenheit </option>
+						</select>
+					</td>
+				</tr>
+			</table>
+		</form>
+		
+		
+		<script>
+			function convert() {
+				var x = document.getElementById('1').value;
+				var inp = parseFloat(x);
+				var inUnit = document.getElementById('3').value;
+				var outUnit = document.getElementById('4').value;
+				if((inUnit=='C') && (outUnit=='F'))
+				{
+					res = (inp*9)/5+32;
+				}
+				else if((inUnit=='F') && (outUnit=='C'))
+				{
+					res = (inp-32)*5/9;
+				}
+				else if((inUnit=='K') && (outUnit=='C'))
+				{
+					res = inp-273;
+				}
+				else if((inUnit=='C') && (outUnit=='K'))
+				{
+					res = inp+273;
+				}
+				else if((inUnit=='K') && (outUnit=='F'))
+				{
+					res = (inp-273)*9/5+32;
+				}
+				else if((inUnit=='F') && (outUnit=='K'))
+				{
+					res = (inp-32)*5/9+273;
+				}
+				else
+				{
+					res = inp;
+				}
+				
+				document.getElementById('2').value = res;
+			}
+		</script>
+	</body>
+</html>
+
+
+
+

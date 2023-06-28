@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <script type="text/javascript">
+        Person={
+            first:"",
+            last:"",
+            intro:{                        //object start with { }    nested object
+                qualification:'B.Tech',
+                desg:'Student'
+            },
+            fullName:function(){
+                return this.first+" "+this.last;
+            }
+        }
+        clr_arr=['red','green','black',567891];
+        Person.first='Juhi';
+        Person.last='Verma';
+        clr_arr.push('yellow');
+        z=clr_arr.pop();
+
+        alert(Person.fullName());
+        
+        for(i=0;i<clr_arr.length;i++){
+            document.write("<h1 style='color:"+clr_arr[i]+"'>");
+            document.write(Person.intro.desg);
+            document.write("</h1>");
+        }
+
+        document.write(clr_arr.sort().join('----'));
+        document.write(clr_arr.sort().reverse());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

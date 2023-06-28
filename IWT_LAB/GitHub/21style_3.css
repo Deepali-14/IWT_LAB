@@ -1,0 +1,145 @@
+body{
+    margin: 0;
+    margin-top: 8px;
+}
+
+/* Menu Bar */
+
+.menu{
+    font-size: 15px;
+    position: relative;
+    top: 8px;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+.menu ol{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu ol a{
+    text-decoration: none;
+}
+.menu ol li{
+    color:slateblue;
+    margin: 4px;
+    float: left;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.menu ol li:hover{
+    color:darkgrey;
+}
+
+/* Top Bar */
+.top{
+    font-size: 20px;
+    position: relative;
+    top: 150px;
+}
+.top ol{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.top ol a{
+    text-decoration: none;
+}
+.top ol li{
+    background-color:rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+    margin: 0px;
+    float: left;
+    width: 14.285%;
+    height: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top ol li:hover{
+    color:rgb(0, 0, 0);
+    background-color: #fff;
+}
+
+.outer{
+    margin: 0;
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#logo{
+    height: 150px;
+}
+
+.div1{
+    background-image: url("images/bv.png");
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 410px;
+    position: relative;
+    top:150px;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+#style{
+    height: 410px;
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 30px;
+    font-family:'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    justify-content: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#vide{
+    text-decoration: none;
+    color: #ffffff;
+}
+ #vid{
+    font-size: 20px;
+    color: #ffffff;
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 5px;
+ }
+
+ #vid:hover{
+    font-size: 20px;
+    color: #ffffff;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 5px;
+ }
+
+ /* .div2{
+    background-color:slategray;
+    width: 97%;
+    height: 500px;
+    position: relative;
+    padding: 20px;
+    top:150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+}
+h1{
+    text-align: center;
+} */

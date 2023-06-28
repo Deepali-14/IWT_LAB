@@ -1,0 +1,36 @@
+body
+{
+	background-image : linear-gradient(to top, rgba(23,34,56,0.2), rgba(234,50,234,0.3), rgba(34,130,56,0.5)), url('images/2.jpeg');
+	background-repeat:no-repeat;
+	background-size:cover;
+	<!--background-image:radial-gradient(rgba(255,34,56,0.6), rgba(234,234,234,0.7), rgba(34,230,56,0.7));-->
+	<!--background-image:conic-gradient(rgba(255,122,56,0.6) 80%, rgba(234,54,234,0.7) 60%, rgba(250,230,56,0.7));-->
+	<!--background-image:linear-gradient(to bottom right, rgba(0,0,0,0.6) 60%, rgba(255,255,255,0.6) 60% );-->
+}
+h1
+{
+	font-size:30px;
+	font-weight:700;
+	color:black;
+}
+p
+{
+	font-size:15px;
+	color:black;
+	background-color:white;
+	line-height:1.5;
+	text-align:center;
+}
+h2
+{
+	font-size:30px;
+	font-weight:700;
+	color:black;
+}
+pre
+{
+	font-size:15px;
+	color:black;
+	background-color:white;
+	line-height:1.5;
+}

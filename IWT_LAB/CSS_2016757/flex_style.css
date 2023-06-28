@@ -1,0 +1,59 @@
+body{
+    background-color:lavenderblush;
+}
+
+.container{
+    border: solid royalblue 2px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 800px;
+    width: 800px;
+    background-color: lightgrey;
+}
+
+.container > div{
+    border: solid lightblue 2px;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    background-color:bisque;
+    justify-content: center;
+    align-items: center;
+    animation-name: animateOne;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: relative;
+}
+
+/*.container > div:hover{
+    border: solid lightblue 2px;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    background-color:cadetblue;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(360deg) scale(2) skew(20deg) translateY(100px);
+    transition: 2s;
+}*/
+
+@keyframes animateOne{
+    from{
+        transform: rotate(0deg);
+        left: 0px;
+    }
+    50%{
+        left: 300px;
+        top: 0px;
+    }
+    to{
+        transform: rotate(360deg);             /*translate(100px)*/
+        background-color: cadetblue;
+        left: 300px;
+        top: 300px;
+    }
+}

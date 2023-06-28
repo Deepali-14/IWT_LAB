@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-08"?>
+<studentDetails>
+	<student rollnumber="1">
+		<name>
+			<first>Deepali</first>
+			<last>Singh</last>
+		</name>
+		<class>BTech IT(A)</class>
+		<marks>
+			<m1>99</m1>
+			<m2>98</m2>
+			<m3>99</m3>
+			<m4>99</m4>
+			<m5>99</m5>
+		</marks>
+	</student>
+	<student rollnumber="2">
+		<name>
+			<first>Ayushi</first>
+			<last>Rajput</last>
+		</name>
+		<class>BTech IT(A)</class>
+		<marks>
+			<m1>95</m1>
+			<m2>98</m2>
+			<m3>95</m3>
+			<m4>99</m4>
+			<m5>98</m5>
+		</marks>
+	</student>
+	<student rollnumber="2">
+		<name>
+			<first>Riya</first>
+			<last>Jha</last>
+		</name>
+		<class>BTech IT(A)</class>
+		<marks>
+			<m1>90</m1>
+			<m2>91</m2>
+			<m3>99</m3>
+			<m4>92</m4>
+			<m5>93</m5>
+		</marks>
+	</student>
+</studentDetails>

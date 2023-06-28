@@ -1,0 +1,52 @@
+<!-- Make a layout template that contains a header and two paragraphs. Use float to line up the 
+two paragraphs as columns side by side. Give the header and two paragraphs a border 
+and/or a background color so you can see where they are. -->
+
+
+<html>
+    <head>
+        <title>
+            CSS Example
+        </title>
+        <link href="style1.css" type="text/css" rel="stylesheet" />
+        <style>
+                p {
+                    background-color:rgba(216, 224, 231, 0.9);
+                    font-size:30px;
+                    text-align:justify;
+                    text-align-last:left;
+                    text-indent:100px;
+                    font-family:arial, 'Times New Roman', Times, serif;
+                    line-height:1.5;
+                }
+                h1 {
+                    font-size:50px;
+                    color:beige;
+                    text-align:center;
+                    font-weight:700;
+                    font-variant:small-caps;
+                    line-height:2;
+                }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Uniform Resource Locator (URL)
+        </h1>
+        <p>
+            <img src="images/14.jpeg" />
+            A client that wants to access a web page needs the file name and the address. To facilitate the access of documents 
+            distributed throughout the world, HTTP uses locators. The uniform resource locator (URL) is a standard locator for 
+            specifying any kind of information on the Internet. The URL defines four things: protocol, host computer, port, and path.  
+            A URL has two main components: Protocol identifier: For the URL http://example.com, the protocol identifier is http. 
+            Resource name: For the URL http://example.com, the resource name is example.com.
+        </p>
+        <p>
+            The protocol is a client-server application program used to retrieve the document. Many different protocols can retrieve 
+            a document; among them are Gopher, FTP, HTTP, News, and TELNET. The most common today is HTTP. The host is the domain name 
+            of the computer on which the information is located. Web pages are usually stored in computers, and computers are given 
+            domain name aliases that usually begin with the characters “www”. But the host can have any domain name. Thus, a URL is a 
+            reference to a web resource specifying its location on a computer network and a mechanism to retrieve it. 
+        </p>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>FORM</h1>
+        <form>
+            <table>
+                <tr><label>Name</label>
+                    <td><input type='text' name='name' placeholder='Name' /></td>
+                </tr>
+                <tr><label>Email</label>
+                    <td><input type='email' name='Mail' placeholder='Email' /></td>
+                </tr>
+                <tr><label>Contact</label>
+                    <td><input type='text' name='pno' placeholder='Phone Number' /></td>
+                </tr>
+                <tr><label>Qualification</label></tr>
+                <tr><table id='t1'>
+                    <tr>
+                        <td><label>Class</label></td>
+                        <td><label>Year</label></td>
+                        <td><label>Percentage/CGPA</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type='text' name='cls' placeholder='Class' /></td>
+                        <td><input type='text' name='year' placeholder='Year' /></td>
+                        <td><input type='text' name='per' placeholder='Percentage/CGPA' /></td>
+                    </tr>
+                </table>
+                </tr>
+                <tr><button onclick='addRow()'>Add Row</button><br>
+                <label>Technical Skills</label><br>
+                <input type='checkbox' name='skill' value='C' />C
+                <input type='checkbox' name='skill' value='C++' />C++
+                <input type='checkbox' name='skill' value='Java' />Java
+                <input type='checkbox' name='skill' value='Python' />Python
+                <input type='checkbox' name='skill' value='HTML' />HTML
+                <input type='checkbox' name='skill' value='CSS' />CSS
+                <input type='checkbox' name='skill' value='JS' />JS
+                <br><label>Hobbies</label><br>
+                <input type='checkbox' name='hobby' value='singing' />Singing
+                <input type='checkbox' name='hobby' value='singing' />Dancing
+                <input type='checkbox' name='hobby' value='singing' />Playing
+                <input type='checkbox' name='hobby' value='singing' />Writing
+                <input type='checkbox' name='hobby' value='singing' />Reading
+            </table>
+        </form>
+    </body>
+    <script>
+        function addRow()
+        {
+            row=document.createElement('tr');
+            table1=document.getElementById('t1')
+            cell=document.createElement('td');
+            row.appendChild(cell);
+            table1.appendChild(row);
+        }
+    </script>
+    </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eBook Store Register</title>
+</head>
+<body bgcolor="WhiteSmoke">
+    <form action="14c_2.html">
+        <table width="70%" align="center" valign="center" border="0" cellspacing="20">
+            <tr align="center">
+                <td colspan="3"><h1>Create New Account</h1></td>
+            </tr>
+            <tr>
+                <td><b>Name:</b></td>
+                <td colspan="2">
+                    <input type="text" name="name" placeholder="Enter Your Name" size="40" required> 
+                </td>
+            </tr>
+            <tr>
+                <td><b>Age:</b></td>
+                <td colspan="2">
+                    <input type="number" min="0" name="age" placeholder="Enter Your Age" size="40"> 
+                </td>
+            </tr>
+            <tr>
+                <td><b>Gender:</b></td>
+                <td colspan="2">
+                    <select>
+                        <option selected>Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Prefer Not To Say</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><b>Email:</b></td>
+                <td colspan="2">
+                    <input type="email" size="60" placeholder="Enter Your Email"> 
+                </td>
+            </tr>
+            <tr>
+                <td><b>Create Your Username:</b></td>
+                <td colspan="2">
+                    <input type="text" size="60" placeholder="Create Username" required> 
+                </td>
+            </tr>
+            <tr>
+                <td><b>Create Your Password:</b></td>
+                <td colspan="2">
+                    <input type="password" size="60" placeholder="Create Password" required> 
+                </td>
+            </tr>
+            <tr>
+                <td><b>Select Your Genre Preference:</b></td>
+                <td align="left">
+                    <h4>Fiction</h4>
+                </td>
+                <td align="left">
+                    <h4>Non-Fiction</h4>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td align="left">
+                    <input type="checkbox" name="genre" value="fantasy">
+                    <label>Fantasy</label><br>
+                    <input type="checkbox" name="genre" value="science">
+                    <label>Science Fiction</label><br>
+                    <input type="checkbox" name="genre" value="historical">
+                    <label>Historical Fiction</label><br>
+                    <input type="checkbox" name="genre" value="realistic">
+                    <label>Realistic Fiction</label><br>
+                    <input type="checkbox" name="genre" value="fan">
+                    <label>Fan Fiction</label>
+                </td>
+                <td align="left">
+                    <input type="checkbox" name="genre" value="narrative">
+                    <label>Narrative Non-Fiction</label><br>
+                    <input type="checkbox" name="genre" value="biography">
+                    <label>Biography</label><br>
+                    <input type="checkbox" name="genre" value="periodicals">
+                    <label>Periodicals</label><br>
+                    <input type="checkbox" name="genre" value="self-help">
+                    <label>Self-Help Book</label><br>
+                    <input type="checkbox" name="genre" value="reference">
+                    <label>Reference Book</label>
+                </td>
+            </tr>
+            <tr align="center">
+                <td colspan="3">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!-- Write a JS function that accepts rows and column from user and display a table layout with alternate cell colours black and red -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <script>
+        function table(row,col)                         //function declaration
+{
+    document.write("<table>");
+    for(i=1;i<=row;i++)
+    {
+        document.write("<tr>");
+        for(j=1;j<=col;j++)
+        {
+            if((i%2==0 && j%2!=0) || (i%2!=0 && j%2==0))
+            {
+                clr='red';
+            }
+            else
+            {
+                clr='black';
+            }
+            document.write("<td bgcolor='"+clr+"'>");
+            document.write("<font color='white'>" +i*j+ "</p>");
+            document.write("</td>")
+        }
+        document.write("</tr>");
+    }
+    document.write("</table>");
+}
+    </script>
+    <style>
+        /* table{
+            height:200px;
+            width: 300px;
+        } */
+        td{
+            height:50px;
+            width:50px;
+        }
+        font{
+            display: none;
+        }
+        td:hover font{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        row=prompt("Enter Number of Rows");
+        col=prompt("Enter Number of Columns");
+        table(row,col);                //function call
+    </script>
+</body>
+</html>

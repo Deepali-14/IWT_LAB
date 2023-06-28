@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>
+            Animation
+        </title>
+        <style>
+            div
+            {
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="text"></div>
+        <script>
+            size=5;
+            block=document.getElementById('text');
+            function increase()
+            {
+                block.innerHTML="TEXT-GROWING";
+                block.style.color="red";
+                block.style.fontSize=size++;
+                if(size==50)
+                {
+                    clearInterval(d);
+                    i=setInterval(decrease,100);
+                }
+                    
+            }
+            function decrease()
+            {
+                block.innerHTML="TEXT-SHRINKING";
+                block.style.color="blue";
+                block.style.fontSize=size--;
+                if(size==5)
+                {
+                    clearInterval(i);
+                    d=setInterval(increase,100);
+                }
+            }
+            d=setInterval(increase,100);
+        </script>
+    </body>
+</html>

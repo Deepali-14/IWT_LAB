@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Card</title>
+        <style>
+            *{
+                box-sizing: border-box;
+             }
+            .card
+            {
+                position:relative;
+                width:30%;
+                border: 2px solid black;
+                box-shadow: 5px 10px pink;
+                margin:10px;
+                height:800px;
+            }
+            .card>img
+            {
+                width:100%;
+                height:500px;
+            }
+            .desc
+            {
+                padding:20px;
+            }
+            h2{
+                text-align:center;
+                color:rgba(0, 38, 255, 0.459);
+            }
+            p{
+                text-align:justify;
+                color:blueviolet
+            }
+            .date
+            {
+                width:30%;
+                color:plum;
+                font-size:15px;
+                background-color:rgba(255, 230, 0, 0.459);
+                position:absolute;
+                top:96%;
+                left:63%;
+                transform:rotate(-6deg);
+                text-align:center;
+            }
+            body{
+                display:flex;
+                margin:0px;
+                padding:0px;
+                justify-content: center;
+                align-items:flex-start;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            images=["10.jpg", "19.jpg", "bday.jpg"];
+            date=["06-03-2023", "07-03-2023", "07-03-2023"];
+            titles=["Holika Dahan", "Holi Celebration", "Birthdayyy!!!"];
+            desc=["Holika Dahan will be done with all the excitement. So prepare yourself for all the upcoming crazyness as it will be all about dance, dance and dance.", 
+                    "Holi will be celebrated this year on the given date. You are invited to play colours in front of our hostel Shri Shanta Vasati. it will be all fun and no one will be allowed to stay clean...",
+                    "It's my BIRTHDAYYY. You all are cordially invited to shower blessings on me turning 20 this year. May my life be full of joy and happiness. I Love Me <3"]
+            
+            
+            for(i=0; i<3; i++)
+            {
+            
+                card='<div class="card">'
+                    +'<img src="images/'+images[i]+'" />'
+                    +'<div class="date">'+date[i]+'</div>'
+                    +'<div class="desc">'
+                        +'<h2>'+titles[i]+'</h2>'
+                        +'<p>'+desc[i]+'</p>'
+                    +'</div>'
+                +'</div>'
+                document.write(card);
+            }
+            
+        </script>
+        
+    </body>
+</html>
